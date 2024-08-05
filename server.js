@@ -9,7 +9,10 @@ import JobRouter from "./routes/JobRouters.js";
 import authRouter from "./routes/authRouter.js";
 import userRouter from "./routes/userRouter.js";
 const app = express();
-
+//public
+import { dirname } from "path";
+import { fileURLToPath } from "url";
+import path from "path";
 //middleware
 import errorHandlerMiddleware from "./middleware/errorHandlerMiddleware.js";
 import { authenticateUser } from "./middleware/authMiddleware.js";
@@ -17,10 +20,12 @@ import cookieParser from "cookie-parser";
 // Middleware to parse JSON bodies
 app.use(express.json());
 
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
-
+app.use(express.static(path.resolve(__dirname, "./public")));
 app.use(cookieParser());
 app.use(express.json());
 
