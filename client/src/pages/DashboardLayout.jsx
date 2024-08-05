@@ -5,7 +5,6 @@ import { createContext, useContext, useState } from "react";
 import customFetch from "../utils/customFetch";
 import { toast } from "react-toastify";
 
-//load data
 export const loader = async () => {
   try {
     const { data } = await customFetch.get("/users/current-user");
