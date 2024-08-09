@@ -1,4 +1,5 @@
 const FormRowSelector = ({ name, labelText, list, defaultValue = "" }) => {
+  //select Input
   return (
     <div className="form-row">
       <label htmlFor={name} className="form-label">
