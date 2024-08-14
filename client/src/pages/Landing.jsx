@@ -17,10 +17,11 @@ const Landing = () => {
             job <span>tracking</span> app
           </h1>
           <p>
-            I'm baby wayfarers hoodie next level taiyaki brooklyn cliche blue
-            bottle single-origin coffee chia. Aesthetic post-ironic venmo,
-            quinoa lo-fi tote bag adaptogen everyday carry meggings +1 brunch
-            narwhal.
+            Streamline your job search with Jobify, the ultimate platform for
+            modern professionals. From personalized job matches to seamless
+            application tracking, Jobify empowers you to take control of your
+            career journey. Discover opportunities, stay organized, and land
+            your next role with ease
           </p>
           <Link to="/register" className="btn register-link">
             Register
